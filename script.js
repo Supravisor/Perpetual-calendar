@@ -6,3 +6,18 @@ let thisMonth = thisDate.getMonth();
 const maxMonth = thisMonth - 1;
 let thisYear = thisDate.getFullYear();
 let nextYear = false;
+
+const array = [
+  ["January", ["New Years Day"], ["Day after New Years Day"]],
+  ["February", []],
+  ["March", []],
+  ["April", [], [], ["Good Friday"], [], ["Easter Monday"], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Anzac Day"]],
+  ["May", []],
+  ["June", []],
+  ["July", [], [], [], [], [], [], [], [], [], ["Matariki"]],
+  ["August", []],
+  ["September", []],
+  ["October", []],
+  ["November", []],
+  ["December", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Christmas Day"], ["Boxing Day"]]
+];
