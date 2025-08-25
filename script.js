@@ -6,3 +6,6 @@ let thisMonth = thisDate.getMonth();
 const maxMonth = thisMonth - 1;
 let thisYear = thisDate.getFullYear();
 let nextYear = false;
+
+const array = [
+];
