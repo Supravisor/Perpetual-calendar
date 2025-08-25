@@ -9,4 +9,5 @@ let nextYear = false;
 
 const array = [
   ["January", ["New Years Day"], ["Day after New Years Day"]],
+  ["February", []],
 ];
