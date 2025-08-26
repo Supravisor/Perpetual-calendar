@@ -24,4 +24,6 @@ const array = [
 
 const calendar = (rightNow, month, year) => {
   const body = document.querySelector("body");
+
+  const monthName = document.getElementById("monthName");
 }
