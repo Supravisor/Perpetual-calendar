@@ -21,3 +21,6 @@ const array = [
   ["November", []],
   ["December", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Christmas Day"], ["Boxing Day"]]
 ];
+
+const calendar = (rightNow, month, year) => {
+}
