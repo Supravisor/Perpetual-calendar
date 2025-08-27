@@ -32,4 +32,6 @@ const calendar = (rightNow, month, year) => {
   let now = new Date(thisYear, thisMonth, thisDay);
   let diff = new Date(thisYear, thisMonth, 1).getTime();
   let monthStart = new Date(diff).toLocaleString("default", { weekday: "long" });
+
+  let header = document.createElement("header");
 }
