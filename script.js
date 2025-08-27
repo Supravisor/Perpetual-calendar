@@ -44,5 +44,6 @@ const calendar = (rightNow, month, year) => {
       let td = document.createElement("td");
         td.style.borderRadius = "10px";
         td.innerText = new Date(2000,1,day).toLocaleString("default", { weekday: "long" });
+        daysOfTheWeek.appendChild(td);
     }
 }
