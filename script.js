@@ -30,4 +30,5 @@ const calendar = (rightNow, month, year) => {
   const days = document.getElementById("days");
 
   let now = new Date(thisYear, thisMonth, thisDay);
+  let diff = new Date(thisYear, thisMonth, 1).getTime();
 }
