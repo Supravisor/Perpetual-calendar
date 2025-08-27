@@ -37,4 +37,11 @@ const calendar = (rightNow, month, year) => {
     body.appendChild(header);
 
   let table = document.createElement("table");
+
+  // days of the week
+  let daysOfTheWeek = document.createElement("tr");
+    for (let day = 0; day < 7; day++) {
+      let td = document.createElement("td");
+        td.style.borderRadius = "10px";
+    }
 }
