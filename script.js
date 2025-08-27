@@ -35,4 +35,6 @@ const calendar = (rightNow, month, year) => {
 
   let header = document.createElement("header");
     body.appendChild(header);
+
+  let table = document.createElement("table");
 }
