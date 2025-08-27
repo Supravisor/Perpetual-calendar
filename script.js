@@ -41,5 +41,6 @@ const calendar = (rightNow, month, year) => {
   // days of the week
   let daysOfTheWeek = document.createElement("tr");
     for (let day = 0; day < 7; day++) {
+      let td = document.createElement("td");
     }
 }
