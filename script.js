@@ -42,5 +42,6 @@ const calendar = (rightNow, month, year) => {
   let daysOfTheWeek = document.createElement("tr");
     for (let day = 0; day < 7; day++) {
       let td = document.createElement("td");
+        td.style.borderRadius = "10px";
     }
 }
