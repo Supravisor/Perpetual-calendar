@@ -47,6 +47,7 @@ const calendar = (rightNow, month, year) => {
         daysOfTheWeek.appendChild(td);
     }
     table.appendChild(daysOfTheWeek);
+    body.appendChild(table)
 }
 
 calendar(thisDay, thisMonth, thisYear);
