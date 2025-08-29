@@ -46,6 +46,8 @@ const calendar = (rightNow, month, year) => {
         td.innerText = new Date(2000,1,day).toLocaleString("default", { weekday: "long" });
         daysOfTheWeek.appendChild(td);
     }
+
+  // days of the week for table
     table.appendChild(daysOfTheWeek);
     body.appendChild(table)
 }
