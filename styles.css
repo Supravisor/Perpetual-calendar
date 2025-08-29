@@ -7,4 +7,5 @@ body {
 
 td {
   width: calc(100vw / 7);
+  border: 1px solid grey;
 }
