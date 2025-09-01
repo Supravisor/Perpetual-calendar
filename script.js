@@ -53,6 +53,7 @@ const calendar = (rightNow, month, year) => {
 
   // calendar dates
   let week = document.querySelectorAll("td");
+  let incrementor = 0;
 
 }
 
