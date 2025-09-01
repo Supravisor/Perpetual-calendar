@@ -55,6 +55,9 @@ const calendar = (rightNow, month, year) => {
   let week = document.querySelectorAll("td");
   let incrementor = 0;
 
+    for (let month = 0; month < 6; month++) {
+
+    }
 }
 
 calendar(thisDay, thisMonth, thisYear);
