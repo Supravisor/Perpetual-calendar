@@ -77,6 +77,7 @@ const calendar = (rightNow, month, year) => {
 
       }
 
+      table.append(weeklyRow);
 
     }
 }
