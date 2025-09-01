@@ -74,6 +74,8 @@ const calendar = (rightNow, month, year) => {
 
           td.innerHTML = `${new Date(diff + incrementor).getDate()} </br>`;
 
+          incrementor += 1000*24*60*60;
+
         }
 
       }
