@@ -74,6 +74,9 @@ const calendar = (rightNow, month, year) => {
 
           td.innerHTML = `${new Date(diff + incrementor).getDate()} </br>`;
 
+          if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
+          }
+
           incrementor += 1000*24*60*60;
 
         }
