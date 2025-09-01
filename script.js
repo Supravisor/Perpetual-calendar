@@ -57,6 +57,11 @@ const calendar = (rightNow, month, year) => {
 
     for (let month = 0; month < 6; month++) {
       let weeklyRow = document.createElement("tr");
+
+      if (now.toLocaleString("default", { month: "long" }) !== new Date (diff + incrementor).toLocaleString("default", { month: "long" })) {
+        break;
+      }
+
     }
 }
 
