@@ -62,6 +62,10 @@ const calendar = (rightNow, month, year) => {
         break;
       }
 
+      for (let day = 0; day < 7; day++) {
+      }
+
+
     }
 }
 
