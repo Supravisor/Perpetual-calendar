@@ -73,6 +73,7 @@ const calendar = (rightNow, month, year) => {
           weeklyRow.appendChild(td);
         }
 
+        td.innerHTML = `${new Date(diff + incrementor).getDate()} </br>`;
 
       }
 
