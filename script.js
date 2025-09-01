@@ -65,6 +65,7 @@ const calendar = (rightNow, month, year) => {
       for (let day = 0; day < 7; day++) {
         if (week[day].innerText === monthStart || week[day].innerText === new Date(diff + incrementor).toLocaleString("default", { weekday: "long" })) {
           let td = document.createElement("td");
+            td.style.padding = "0.5em 0.5em 0";
         }
       }
 
