@@ -69,9 +69,10 @@ const calendar = (rightNow, month, year) => {
             td.style.textAlign = "unset";
             td.style.verticalAlign = "top";
             td.style.height = "8em";
+
+          weeklyRow.appendChild(td);
         }
 
-      weeklyRow.appendChild(td);
 
       }
 
