@@ -56,7 +56,7 @@ const calendar = (rightNow, month, year) => {
   let incrementor = 0;
 
     for (let month = 0; month < 6; month++) {
-
+      let weeklyRow = document.createElement("tr");
     }
 }
 
