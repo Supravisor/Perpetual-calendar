@@ -50,6 +50,34 @@ const calendar = (rightNow, month, year) => {
   // days of the week for table
     table.appendChild(daysOfTheWeek);
     body.appendChild(table)
+
+  // calendar dates
+  let week = document.querySelectorAll("td");
+  let incrementor = 0;
+
+    for (let month = 0; month < 6; month++) {
+      let weeklyRow = document.createElement("tr");
+
+      if (now.toLocaleString("default", { month: "long" }) !== new Date (diff + incrementor).toLocaleString("default", { month: "long" })) {
+        break;
+      }
+
+      for (let day = 0; day < 7; day++) {
+        if (week[day].innerText === monthStart || week[day].innerText === new Date(diff + incrementor).toLocaleString("default", { weekday: "long" })) {
+          let td = document.createElement("td");
+            td.style.padding = "0.5em 0.5em 0";
+            td.style.textAlign = "unset";
+            td.style.verticalAlign = "top";
+            td.style.height = "8em";
+
+          weeklyRow.appendChild(td);
+        }
+
+
+      }
+
+
+    }
 }
 
 calendar(thisDay, thisMonth, thisYear);
