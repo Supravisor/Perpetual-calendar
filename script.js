@@ -50,6 +50,10 @@ const calendar = (rightNow, month, year) => {
   // days of the week for table
     table.appendChild(daysOfTheWeek);
     body.appendChild(table)
+
+  // calendar dates
+  let week = document.querySelectorAll("td");
+
 }
 
 calendar(thisDay, thisMonth, thisYear);
