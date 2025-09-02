@@ -87,6 +87,10 @@ const calendar = (rightNow, month, year) => {
 
           } else {
               let td = document.createElement("td");
+                td.style.padding = "0.5em 0.5em 0";
+                td.style.textAlign = "unset";
+                td.style.verticalAlign = "top";
+                td.style.height = "6em";
     
           }
 
