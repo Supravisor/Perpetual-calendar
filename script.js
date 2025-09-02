@@ -80,6 +80,7 @@ const calendar = (rightNow, month, year) => {
           }
 
           if (array[thisMonth][new Date(diff + incrementor).getDate()]) {
+            td.innerHTML += `<ul>${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
           }
 
           incrementor += 1000*24*60*60;
