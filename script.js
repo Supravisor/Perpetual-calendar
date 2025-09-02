@@ -92,6 +92,11 @@ const calendar = (rightNow, month, year) => {
                 td.style.verticalAlign = "top";
                 td.style.height = "6em";
     
+              if (month === 0 || new Date(diff + incrementor).getDate() < 7) {
+                td.innerText = "";
+                td.style.border = "none";
+              }
+      
           }
 
 
