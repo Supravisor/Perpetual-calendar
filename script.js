@@ -85,7 +85,22 @@ const calendar = (rightNow, month, year) => {
 
           incrementor += 1000*24*60*60;
 
-        }
+          } else {
+              let td = document.createElement("td");
+                td.style.padding = "0.5em 0.5em 0";
+                td.style.textAlign = "unset";
+                td.style.verticalAlign = "top";
+                td.style.height = "6em";
+    
+              if (month === 0 || new Date(diff + incrementor).getDate() < 7) {
+                td.innerText = "";
+                td.style.border = "none";
+              }
+
+              weeklyRow.appendChild(td);
+      
+          }
+
 
       }
 
