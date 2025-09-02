@@ -96,6 +96,8 @@ const calendar = (rightNow, month, year) => {
                 td.innerText = "";
                 td.style.border = "none";
               }
+
+              weeklyRow.appendChild(td);
       
           }
 
