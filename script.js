@@ -86,6 +86,7 @@ const calendar = (rightNow, month, year) => {
           incrementor += 1000*24*60*60;
 
           } else {
+              let td = document.createElement("td");
     
           }
 
