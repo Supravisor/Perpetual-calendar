@@ -24,6 +24,10 @@ const array = [
 
 function next() {
 
+  if (counter < 12) {
+
+  }
+
 }
 
 const calendar = (rightNow, month, year) => {
