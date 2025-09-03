@@ -27,6 +27,8 @@ function next() {
   if (counter < 12) {
     counter++;
 
+    if (thisMonth === 11) {
+    }
   }
 
 }
