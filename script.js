@@ -59,6 +59,19 @@ const calendar = (rightNow, month, year) => {
     h1.innerText = now.toLocaleString("default", { month: "long" }) + " " + now.getFullYear();
     header.append(h1);
 
+  // next button
+  let nextButton = document.createElement("button");
+
+    if (counter === 12) {
+      nextButton.style.backgroundColor = "transparent";
+      nextButton.style.border = "none";
+    } else {
+      nextButton.innerText = "Next >>";
+      nextButton.onclick = next;
+    }
+
+    header.appendChild(nextButton);
+
   let table = document.createElement("table");
 
   // days of the week
