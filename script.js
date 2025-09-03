@@ -31,6 +31,9 @@ function next() {
       thisMonth -= 12
       thisYear++
     }
+
+    calendar(thisDay, (++thisMonth), thisYear);
+
   }
 
 }
