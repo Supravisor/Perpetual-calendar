@@ -93,6 +93,10 @@ const calendar = (rightNow, month, year) => {
             td.style.verticalAlign = "top";
             td.style.height = "8em";
 
+        if (new Date(diff + incrementor).getDate() === thisDay && new Date(diff + incrementor).getMonth() === thisMonth && new Date().getMonth() === thisMonth) {
+          td.style.color = "black";
+          td.style.backgroundColor = "white";
+        }
           weeklyRow.appendChild(td);
 
           td.innerHTML = `${new Date(diff + incrementor).getDate()} </br>`;
