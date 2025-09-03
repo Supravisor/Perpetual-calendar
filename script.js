@@ -57,6 +57,7 @@ const calendar = (rightNow, month, year) => {
   // heading
   let h1 = document.createElement("h1");
     h1.innerText = now.toLocaleString("default", { month: "long" }) + " " + now.getFullYear();
+    header.append(h1);
 
   let table = document.createElement("table");
 
