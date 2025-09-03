@@ -54,6 +54,9 @@ const calendar = (rightNow, month, year) => {
   let header = document.createElement("header");
     body.appendChild(header);
 
+  // heading
+  let h1 = document.createElement("h1");
+
   let table = document.createElement("table");
 
   // days of the week
