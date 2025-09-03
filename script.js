@@ -22,6 +22,24 @@ const array = [
   ["December", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Christmas Day"], ["Boxing Day"]]
 ];
 
+function next() {
+
+  if (counter < 12) {
+    counter++;
+
+    if (thisMonth === 11) {
+      thisMonth -= 12
+      thisYear++
+    }
+
+    calendar(thisDay, (++thisMonth), thisYear);
+    const callMonth = document.querySelectorAll("h1");
+    callMonth[0].innerText = new Date(thisYear, thisMonth, thisDay).toLocaleString("default", { month: "long" }) + " " + new Date(thisYear, thisMonth, thisDay).getFullYear();
+
+  }
+
+}
+
 const calendar = (rightNow, month, year) => {
   const body = document.querySelector("body");
 
