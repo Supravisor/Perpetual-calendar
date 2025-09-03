@@ -22,6 +22,10 @@ const array = [
   ["December", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Christmas Day"], ["Boxing Day"]]
 ];
 
+function next() {
+
+}
+
 const calendar = (rightNow, month, year) => {
   const body = document.querySelector("body");
 
