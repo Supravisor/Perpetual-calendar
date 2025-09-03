@@ -33,6 +33,7 @@ function next() {
     }
 
     calendar(thisDay, (++thisMonth), thisYear);
+    const callMonth = document.querySelectorAll("h1");
 
   }
 
