@@ -5,6 +5,10 @@ body {
   font-family: Arial;
 }
 
+h1 {
+  text-align: center;
+}
+
 td {
   width: calc(100vw / 7);
   border: 1px solid grey;
