@@ -34,6 +34,7 @@ function next() {
 
     calendar(thisDay, (++thisMonth), thisYear);
     const callMonth = document.querySelectorAll("h1");
+    callMonth[0].innerText = new Date(thisYear, thisMonth, thisDay).toLocaleString("default", { month: "long" }) + " " + new Date(thisYear, thisMonth, thisDay).getFullYear();
 
   }
 
