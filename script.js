@@ -29,6 +29,7 @@ function next() {
 
     if (thisMonth === 11) {
       thisMonth -= 12
+      thisYear++
     }
   }
 
