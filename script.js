@@ -65,6 +65,9 @@ const calendar = (rightNow, month, year) => {
     if (counter === 12) {
       nextButton.style.backgroundColor = "transparent";
       nextButton.style.border = "none";
+    } else {
+      nextButton.innerText = "Next >>";
+      nextButton.onclick = next;
     }
 
     header.appendChild(nextButton);
