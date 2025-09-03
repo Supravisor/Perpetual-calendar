@@ -25,6 +25,7 @@ const array = [
 function next() {
 
   if (counter < 12) {
+    counter++;
 
   }
 
