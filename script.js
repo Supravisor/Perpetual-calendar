@@ -62,6 +62,13 @@ const calendar = (rightNow, month, year) => {
   // next button
   let nextButton = document.createElement("button");
 
+    if (counter === 12) {
+      nextButton.style.backgroundColor = "transparent";
+      nextButton.style.border = "none";
+    }
+
+    header.appendChild(nextButton);
+
   let table = document.createElement("table");
 
   // days of the week
