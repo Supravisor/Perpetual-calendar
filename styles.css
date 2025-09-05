@@ -5,6 +5,10 @@ body {
   font-family: Arial;
 }
 
+header {
+  display: flex;
+}
+
 h1 {
   text-align: center;
 }
