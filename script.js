@@ -84,6 +84,8 @@ const calendar = (rightNow, month, year) => {
         previousButton.onclick = previous;
     }
 
+    header.appendChild(previousButton);
+
   // heading
   let h1 = document.createElement("h1");
     h1.innerText = now.toLocaleString("default", { month: "long" }) + " " + now.getFullYear();
