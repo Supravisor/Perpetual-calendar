@@ -72,11 +72,14 @@ const calendar = (rightNow, month, year) => {
   let header = document.createElement("header");
     body.appendChild(header);
 
+  // previous button
+  let previousButton = document.createElement("button");
+
   // heading
   let h1 = document.createElement("h1");
     h1.innerText = now.toLocaleString("default", { month: "long" }) + " " + now.getFullYear();
     header.append(h1);
-
+  
   // next button
   let nextButton = document.createElement("button");
 
