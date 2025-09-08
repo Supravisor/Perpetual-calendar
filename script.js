@@ -29,6 +29,8 @@ function previous() {
   thisYear--
   }
 
+  if (counter >= 2) {
+  }
 
 }
 
