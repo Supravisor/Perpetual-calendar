@@ -22,6 +22,14 @@ const array = [
   ["December", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Christmas Day"], ["Boxing Day"]]
 ];
 
+function previous() {
+
+  if (thisMonth === 0) {
+  }
+
+
+}
+
 function next() {
 
   if (counter < 12) {
