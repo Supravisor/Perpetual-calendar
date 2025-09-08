@@ -35,6 +35,8 @@ function previous() {
 
   if (thisMonth > maxMonth) {
     calendar(thisDay, --thisMonth, thisYear);
+  } else {
+      calendar(thisDay, --thisMonth, thisYear);
   }
 
 }
@@ -72,11 +74,25 @@ const calendar = (rightNow, month, year) => {
   let header = document.createElement("header");
     body.appendChild(header);
 
+  // previous button
+  let previousButton = document.createElement("button");
+
+    if (counter < 2) {
+      previousButton.style.backgroundColor = "transparent";
+      previousButton.style.border = "none";
+      previousButton.onclick = "";
+    } else {
+        previousButton.innerText = "<< Previous";
+        previousButton.onclick = previous;
+    }
+
+    header.appendChild(previousButton);
+
   // heading
   let h1 = document.createElement("h1");
     h1.innerText = now.toLocaleString("default", { month: "long" }) + " " + now.getFullYear();
     header.append(h1);
-
+  
   // next button
   let nextButton = document.createElement("button");
 
@@ -84,8 +100,8 @@ const calendar = (rightNow, month, year) => {
       nextButton.style.backgroundColor = "transparent";
       nextButton.style.border = "none";
     } else {
-      nextButton.innerText = "Next >>";
-      nextButton.onclick = next;
+        nextButton.innerText = "Next >>";
+        nextButton.onclick = next;
     }
 
     header.appendChild(nextButton);
