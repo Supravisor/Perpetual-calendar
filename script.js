@@ -75,6 +75,9 @@ const calendar = (rightNow, month, year) => {
   // previous button
   let previousButton = document.createElement("button");
 
+    if (counter < 2) {
+    }
+
   // heading
   let h1 = document.createElement("h1");
     h1.innerText = now.toLocaleString("default", { month: "long" }) + " " + now.getFullYear();
