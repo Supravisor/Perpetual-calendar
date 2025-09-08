@@ -22,6 +22,23 @@ const array = [
   ["December", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Christmas Day"], ["Boxing Day"]]
 ];
 
+function previous() {
+
+  if (thisMonth === 0) {
+  thisMonth = 12
+  thisYear--
+  }
+
+  if (counter >= 2) {
+    --counter;
+  }
+
+  if (thisMonth > maxMonth) {
+    calendar(thisDay, --thisMonth, thisYear);
+  }
+
+}
+
 function next() {
 
   if (counter < 12) {
