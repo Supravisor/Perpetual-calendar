@@ -39,6 +39,8 @@ function previous() {
       calendar(thisDay, --thisMonth, thisYear);
   }
 
+}
+
 function next() {
 
   if (counter < 12) {
