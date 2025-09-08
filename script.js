@@ -30,6 +30,7 @@ function previous() {
   }
 
   if (counter >= 2) {
+    --counter;
   }
 
 }
