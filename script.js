@@ -81,6 +81,7 @@ const calendar = (rightNow, month, year) => {
       previousButton.onclick = "";
     } else {
         previousButton.innerText = "<< Previous";
+        previousButton.onclick = previous;
     }
 
   // heading
