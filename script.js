@@ -33,6 +33,9 @@ function previous() {
     --counter;
   }
 
+  if (thisMonth > maxMonth) {
+  }
+
 }
 
 function next() {
