@@ -80,6 +80,7 @@ const calendar = (rightNow, month, year) => {
       previousButton.style.border = "none";
       previousButton.onclick = "";
     } else {
+        previousButton.innerText = "<< Previous";
     }
 
   // heading
@@ -94,8 +95,8 @@ const calendar = (rightNow, month, year) => {
       nextButton.style.backgroundColor = "transparent";
       nextButton.style.border = "none";
     } else {
-      nextButton.innerText = "Next >>";
-      nextButton.onclick = next;
+        nextButton.innerText = "Next >>";
+        nextButton.onclick = next;
     }
 
     header.appendChild(nextButton);
