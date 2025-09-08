@@ -76,6 +76,7 @@ const calendar = (rightNow, month, year) => {
   let previousButton = document.createElement("button");
 
     if (counter < 2) {
+      previousButton.style.backgroundColor = "transparent";
     }
 
   // heading
