@@ -79,6 +79,7 @@ const calendar = (rightNow, month, year) => {
       previousButton.style.backgroundColor = "transparent";
       previousButton.style.border = "none";
       previousButton.onclick = "";
+    } else {
     }
 
   // heading
