@@ -25,6 +25,7 @@ const array = [
 function previous() {
 
   if (thisMonth === 0) {
+  thisMonth = 12
   }
 
 
