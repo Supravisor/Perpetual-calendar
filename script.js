@@ -34,6 +34,7 @@ function previous() {
   }
 
   if (thisMonth > maxMonth) {
+    calendar(thisDay, --thisMonth, thisYear);
   }
 
 }
