@@ -33,11 +33,7 @@ function previous() {
     --counter;
   }
 
-  if (thisMonth > maxMonth) {
-    calendar(thisDay, --thisMonth, thisYear);
-  } else {
-      calendar(thisDay, --thisMonth, thisYear);
-  }
+  calendar(thisDay, --thisMonth, thisYear);
 
 }
 
