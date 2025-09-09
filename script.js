@@ -122,6 +122,7 @@ const calendar = (rightNow, month, year) => {
   let incrementor = 0;
 
     for (let month = 0; month < 6; month++) {
+      diff = new Date(diff).setHours(1);
       let weeklyRow = document.createElement("tr");
 
       if (now.toLocaleString("default", { month: "long" }) !== new Date (diff + incrementor).toLocaleString("default", { month: "long" })) {
