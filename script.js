@@ -22,6 +22,10 @@ const array = [
   ["December", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Christmas Day"], ["Boxing Day"]]
 ];
 
+// Easter calculator
+function getEaster(year, weekday) {
+}
+
 function previous() {
 
   if (thisMonth === 0) {
