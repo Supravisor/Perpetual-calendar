@@ -156,9 +156,14 @@ const calendar = (rightNow, month, year) => {
 
           incrementor += 1000*24*60*60;
 
-        // King's Birthday
+        // King's birthday anniversary
         if (new Date(diff + incrementor).getDate() < 9 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
           td.innerHTML += `<ul><li>King's Birthday Anniversary</li></ul>`;
+        }
+
+        // Labour day
+        if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "October") {
+          td.innerHTML += `<ul><li>Labour day</li></ul>`;
         }
 
           } else {
