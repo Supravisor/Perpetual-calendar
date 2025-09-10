@@ -157,7 +157,7 @@ const calendar = (rightNow, month, year) => {
           incrementor += 1000*24*60*60;
 
         // King's Birthday
-        if (new Date(diff + incrementor).getDate() < 9 ) {
+        if (new Date(diff + incrementor).getDate() < 9 && week[day].innerText === "Monday") {
           td.innerHTML += `<ul><li>King's Birthday Anniversary</li></ul>`;
         }
 
