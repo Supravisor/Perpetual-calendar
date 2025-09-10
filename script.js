@@ -156,6 +156,11 @@ const calendar = (rightNow, month, year) => {
 
           incrementor += 1000*24*60*60;
 
+        // King's Birthday
+        if (new Date(diff + incrementor).getDate() < 9 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
+          td.innerHTML += `<ul><li>King's Birthday Anniversary</li></ul>`;
+        }
+
           } else {
               let td = document.createElement("td");
                 td.style.padding = "0.5em 0.5em 0";
