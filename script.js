@@ -145,13 +145,13 @@ const calendar = (rightNow, month, year) => {
 
           td.innerHTML = `${new Date(diff + incrementor).getDate()} </br>`;
 
+          if (array[thisMonth][new Date(diff + incrementor).getDate()]) {
+            td.innerHTML += `<ul>${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
+          }
+
           if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
             td.innerHTML = "";
             td.style.border = "none";
-          }
-
-          if (array[thisMonth][new Date(diff + incrementor).getDate()]) {
-            td.innerHTML += `<ul>${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
           }
 
           incrementor += 1000*24*60*60;
