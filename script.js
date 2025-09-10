@@ -193,6 +193,11 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Labour day</li></ul>`;
         }
 
+        // Good Friday
+        if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getDate()) {
+          td.innerHTML += `<ul><li>Good Friday</li></ul>`;
+        }
+
           } else {
               let td = document.createElement("td");
                 td.style.padding = "0.5em 0.5em 0";
