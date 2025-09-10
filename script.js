@@ -161,6 +161,10 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>King's Birthday Anniversary</li></ul>`;
         }
 
+        // Labour Day
+        if ((new Date(diff + incrementor).getDate() > 21) {
+        }
+
           } else {
               let td = document.createElement("td");
                 td.style.padding = "0.5em 0.5em 0";
