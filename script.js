@@ -162,7 +162,8 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Labour Day
-        if ((new Date(diff + incrementor).getDate() > 21) {
+        if (new Date(diff + incrementor).getDate() > 21) {
+          td.innerHTML += `<ul><li>Labour day</li></ul>`;
         }
 
           } else {
