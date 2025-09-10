@@ -156,6 +156,10 @@ const calendar = (rightNow, month, year) => {
 
           incrementor += 1000*24*60*60;
 
+        // King's Birthday
+        if (new Date(diff + incrementor).getDate() < 9 ) {
+        }
+
           } else {
               let td = document.createElement("td");
                 td.style.padding = "0.5em 0.5em 0";
