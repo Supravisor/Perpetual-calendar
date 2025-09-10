@@ -162,7 +162,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Labour day
-        if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29) {
+        if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday") {
           td.innerHTML += `<ul><li>Labour day</li></ul>`;
         }
 
