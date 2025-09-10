@@ -38,6 +38,15 @@ function getEaster(year, weekday) {
   const m = Math.floor((a + 11 * h + 22 * l) / 451);
   const month = Math.floor((h + l - 7 * m + 114) / 31);
   const day = ((h + l - 7 * m + 114) % 31) + 1;
+
+  if (weekday === "Friday") {
+    return new Date (new Date(year, month - 1, day - 1).setHours(1));
+  } else if (weekday === "Sunday") {
+    return new Date (new Date(year, month - 1, day + 1).setHours(1));
+  } else if (weekday === "Monday") {
+    return new Date (new Date(year, month - 1, day + 2).setHours(1));
+  }
+
 }
 
 function previous() {
