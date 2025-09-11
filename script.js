@@ -11,7 +11,7 @@ const array = [
   ["January", ["New Years Day"], ["Day after New Years Day"]],
   ["February", []],
   ["March", []],
-  ["April", [], [], ["Good Friday"], [], ["Easter Monday"], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Anzac Day"]],
+  ["April", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Anzac Day"]],
   ["May", []],
   ["June", []],
   ["July", [], [], [], [], [], [], [], [], [], ["Matariki"]],
@@ -40,7 +40,7 @@ function getEaster(year, weekday) {
   const day = ((h + l - 7 * m + 114) % 31) + 1;
 
   if (weekday === "Friday") {
-    return new Date (new Date(year, month - 1, day - 1).setHours(1));
+    return new Date (new Date(year, month - 1, day - 2).setHours(1));
   } else if (weekday === "Sunday") {
     return new Date (new Date(year, month - 1, day + 1).setHours(1));
   } else if (weekday === "Monday") {
@@ -176,15 +176,8 @@ const calendar = (rightNow, month, year) => {
             td.innerHTML += `<ul>${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
           }
 
-          if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
-            td.innerHTML = "";
-            td.style.border = "none";
-          }
-
-          incrementor += 1000*24*60*60;
-
         // King's birthday anniversary
-        if (new Date(diff + incrementor).getDate() < 9 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
+        if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
           td.innerHTML += `<ul><li>King's Birthday Anniversary</li></ul>`;
         }
 
@@ -192,6 +185,18 @@ const calendar = (rightNow, month, year) => {
         if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "October") {
           td.innerHTML += `<ul><li>Labour day</li></ul>`;
         }
+
+        // Good Friday
+        if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getDate()) {
+          td.innerHTML += `<ul><li>Good Friday</li></ul>`;
+        }
+
+        if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
+          td.innerHTML = "";
+          td.style.border = "none";
+        }
+
+          incrementor += 1000*24*60*60;
 
           } else {
               let td = document.createElement("td");
