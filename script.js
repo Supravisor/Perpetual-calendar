@@ -44,7 +44,7 @@ function getEaster(year, weekday) {
   } else if (weekday === "Sunday") {
     return new Date (new Date(year, month - 1, day).setHours(1));
   } else if (weekday === "Monday") {
-    return new Date (new Date(year, month - 1, day + 2).setHours(1));
+    return new Date (new Date(year, month - 1, day + 1).setHours(1));
   }
 
 }
@@ -183,7 +183,7 @@ const calendar = (rightNow, month, year) => {
 
         // Labour day
         if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "October") {
-          td.innerHTML += `<ul><li>Labour day</li></ul>`;
+          td.innerHTML += `<ul><li>Labour Day</li></ul>`;
         }
 
         // Good Friday
@@ -194,6 +194,11 @@ const calendar = (rightNow, month, year) => {
         // Easter Sunday
         if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Sunday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Sunday").getDate()) {
           td.innerHTML += `<ul><li>Easter Sunday</li></ul>`;
+        }
+
+        // Easter Monday
+        if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Monday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Monday").getDate()) {
+          td.innerHTML += `<ul><li>Easter Monday</li></ul>`;
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
