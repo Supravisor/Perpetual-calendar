@@ -177,7 +177,7 @@ const calendar = (rightNow, month, year) => {
           }
 
         // King's birthday anniversary
-        if (new Date(diff + incrementor).getDate() < 9 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
+        if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
           td.innerHTML += `<ul><li>King's Birthday Anniversary</li></ul>`;
         }
 
