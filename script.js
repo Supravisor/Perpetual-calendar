@@ -40,7 +40,7 @@ function getEaster(year, weekday) {
   const day = ((h + l - 7 * m + 114) % 31) + 1;
 
   if (weekday === "Friday") {
-    return new Date (new Date(year, month - 1, day - 1).setHours(1));
+    return new Date (new Date(year, month - 1, day - 2).setHours(1));
   } else if (weekday === "Sunday") {
     return new Date (new Date(year, month - 1, day + 1).setHours(1));
   } else if (weekday === "Monday") {
