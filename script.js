@@ -11,7 +11,7 @@ const array = [
   ["January", ["New Years Day"], ["Day after New Years Day"]],
   ["February", []],
   ["March", []],
-  ["April", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Anzac Day"]],
+  ["April", []],
   ["May", []],
   ["June", []],
   ["July", [], [], [], [], [], [], [], [], [], ["Matariki"]],
