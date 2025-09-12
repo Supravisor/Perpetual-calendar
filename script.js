@@ -192,7 +192,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Anzac Day (Actual)
-        if (new Date(diff + incrementor).getDate() === 25 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+        if (new Date(diff + incrementor).getDate() === 25 && week[day].innerText !== "Saturday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
           td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
         }
 
