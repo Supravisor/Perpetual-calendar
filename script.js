@@ -186,7 +186,12 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Labour Day</li></ul>`;
         }
 
-        // Good Friday
+        // Anzac Day
+        if (new Date(diff + incrementor).getDate() === 27 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+          td.innerHTML += `<ul><li>Labour Day</li></ul>`;
+        }
+
+          // Good Friday
         if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getDate()) {
           td.innerHTML += `<ul><li>Good Friday</li></ul>`;
         }
