@@ -186,8 +186,13 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Labour Day</li></ul>`;
         }
 
-        // Anzac Day
+        // Anzac Day (Mondayise)
         if ((new Date(diff + incrementor).getDate() === 26 ||  new Date(diff + incrementor).getDate() === 27) && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+          td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
+        }
+
+        // Anzac Day (Actual)
+        if (new Date(diff + incrementor).getDate() === 25 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
           td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
         }
 
