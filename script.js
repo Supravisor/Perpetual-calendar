@@ -11,7 +11,7 @@ const array = [
   ["January", ["New Years Day"], ["Day after New Years Day"]],
   ["February", []],
   ["March", []],
-  ["April", [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], ["Anzac Day"]],
+  ["April", []],
   ["May", []],
   ["June", []],
   ["July", [], [], [], [], [], [], [], [], [], ["Matariki"]],
@@ -184,6 +184,16 @@ const calendar = (rightNow, month, year) => {
         // Labour day
         if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "October") {
           td.innerHTML += `<ul><li>Labour Day</li></ul>`;
+        }
+
+        // Anzac Day (Mondayise)
+        if ((new Date(diff + incrementor).getDate() === 26 || new Date(diff + incrementor).getDate() === 27) && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+          td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
+        }
+
+        // Anzac Day (Actual)
+        if (new Date(diff + incrementor).getDate() === 25 && week[day].innerText !== "Saturday" && week[day].innerText !== "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+          td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
         }
 
         // Good Friday
