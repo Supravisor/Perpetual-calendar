@@ -192,11 +192,11 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Anzac Day (Actual)
-        if (new Date(diff + incrementor).getDate() === 25 && week[day].innerText !== "Saturday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+        if (new Date(diff + incrementor).getDate() === 25 && week[day].innerText !== "Saturday" && week[day].innerText !== "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
           td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
         }
 
-          // Good Friday
+        // Good Friday
         if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getDate()) {
           td.innerHTML += `<ul><li>Good Friday</li></ul>`;
         }
