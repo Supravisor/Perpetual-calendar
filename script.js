@@ -187,7 +187,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Anzac Day (Mondayise)
-        if ((new Date(diff + incrementor).getDate() === 26 ||  new Date(diff + incrementor).getDate() === 27) && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+        if ((new Date(diff + incrementor).getDate() === 26 || new Date(diff + incrementor).getDate() === 27) && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
           td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
         }
 
