@@ -212,7 +212,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Auckland Anniversary
-        if () {
+        if (new Date(diff + incrementor).getDate() > 21) {
 
         }
 
