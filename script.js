@@ -217,7 +217,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Taranaki Anniversary
-        if (new Date(diff + incrementor).getDate() > 6) {
+        if (new Date(diff + incrementor).getDate() > 6 && new Date(diff + incrementor).getDate() < 15) {
           td.innerHTML += `<ul><li>Taranaki Anniversary</li></ul>`;
         }
 
