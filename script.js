@@ -221,6 +221,11 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Taranaki Anniversary</li></ul>`;
         }
 
+        // Hawke's Bay Anniversary
+        if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Friday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "October") {
+          td.innerHTML += `<ul><li>Hawke's Bay Anniversary</li></ul>`;
+        }
+
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
           td.innerHTML = "";
           td.style.border = "none";
@@ -243,7 +248,6 @@ const calendar = (rightNow, month, year) => {
               weeklyRow.appendChild(td);
       
           }
-
 
       }
 
