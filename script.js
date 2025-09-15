@@ -226,6 +226,11 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Hawke's Bay Anniversary</li></ul>`;
         }
 
+        // Wellington Anniversary
+        if (new Date(diff + incrementor).getDate() > 14 && new Date(diff + incrementor).getDate() < 22 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "January") {
+          td.innerHTML += `<ul><li>Wellington Anniversary</li></ul>`;
+        }
+
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
           td.innerHTML = "";
           td.style.border = "none";
