@@ -227,7 +227,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Wellington Anniversary
-        if () {
+        if (new Date(diff + incrementor).getDate() > 14) {
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
