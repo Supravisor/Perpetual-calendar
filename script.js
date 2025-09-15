@@ -222,7 +222,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Hawke's Bay Anniversary
-        if () {
+        if (new Date(diff + incrementor).getDate() > 21) {
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
