@@ -237,7 +237,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Marlborough Anniversary
-        if () {
+        if (new Date(diff + incrementor).getDate() < 7) {
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
