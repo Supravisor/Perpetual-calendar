@@ -232,7 +232,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Nelson Anniversary
-        if (new Date(diff + incrementor).getDate() < 7 && week[day].innerText === "Monday") {
+        if (new Date(diff + incrementor).getDate() < 7 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "February") {
           td.innerHTML += `<ul><li>Nelson Anniversary</li></ul>`;
         }
 
