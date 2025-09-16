@@ -233,6 +233,7 @@ const calendar = (rightNow, month, year) => {
 
         // Nelson Anniversary
         if (new Date(diff + incrementor).getDate() < 7) {
+          td.innerHTML += `<ul><li>Nelson Anniversary</li></ul>`;
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
