@@ -269,7 +269,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Westland Anniversary (December)
-        if () {
+        if (new Date(diff + incrementor).getDate() < 5) {
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
