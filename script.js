@@ -45,6 +45,8 @@ function getEaster(year, weekday) {
     return new Date (new Date(year, month - 1, day).setHours(1));
   } else if (weekday === "Monday") {
     return new Date (new Date(year, month - 1, day + 1).setHours(1));
+  } else if (weekday === "Tuesday") {
+    return new Date (new Date(year, month - 1, day + 2).setHours(1));
   }
 
 }
