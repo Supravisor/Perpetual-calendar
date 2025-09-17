@@ -269,7 +269,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Westland Anniversary (December)
-        if (new Date(diff + incrementor).getDate() < 5 && week[day].innerText === "Monday") {
+        if (new Date(diff + incrementor).getDate() < 5 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
         }
 
