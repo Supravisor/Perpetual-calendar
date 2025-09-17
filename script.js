@@ -263,6 +263,16 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Southland Anniversary</li></ul>`;
         }
 
+        // Westland Anniversary (November)
+        if (new Date(diff + incrementor).getDate() > 27 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
+          td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
+        }
+
+        // Westland Anniversary (December)
+        if (new Date(diff + incrementor).getDate() < 5 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
+          td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
+        }
+
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
           td.innerHTML = "";
           td.style.border = "none";
