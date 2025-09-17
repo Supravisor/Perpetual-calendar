@@ -253,6 +253,7 @@ const calendar = (rightNow, month, year) => {
 
         // Canterbury Anniversary
         if (new Date(diff + incrementor).getDate() > 11) {
+          td.innerHTML += `<ul><li>Canterbury Anniversary</li></ul>`;
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
