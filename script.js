@@ -45,6 +45,8 @@ function getEaster(year, weekday) {
     return new Date (new Date(year, month - 1, day).setHours(1));
   } else if (weekday === "Monday") {
     return new Date (new Date(year, month - 1, day + 1).setHours(1));
+  } else if (weekday === "Tuesday") {
+    return new Date (new Date(year, month - 1, day + 2).setHours(1));
   }
 
 }
@@ -254,6 +256,11 @@ const calendar = (rightNow, month, year) => {
         // Canterbury Anniversary
         if (new Date(diff + incrementor).getDate() > 11 && new Date(diff + incrementor).getDate() < 18 && week[day].innerText === "Friday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
           td.innerHTML += `<ul><li>Canterbury Anniversary</li></ul>`;
+        }
+
+        // Southland Anniversary
+        if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Tuesday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Tuesday").getDate()) {
+          td.innerHTML += `<ul><li>Southland Anniversary</li></ul>`;
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
