@@ -242,7 +242,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Otago Anniversary
-        if () {
+        if (new Date(diff + incrementor).getDate() > 21) {
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
