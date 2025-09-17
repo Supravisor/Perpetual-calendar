@@ -256,6 +256,10 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Canterbury Anniversary</li></ul>`;
         }
 
+        // Southland Anniversary
+        if () {
+        }
+
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
           td.innerHTML = "";
           td.style.border = "none";
