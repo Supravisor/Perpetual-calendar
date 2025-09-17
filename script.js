@@ -265,6 +265,7 @@ const calendar = (rightNow, month, year) => {
 
         // Westland Anniversary (November)
         if (new Date(diff + incrementor).getDate() > 27) {
+          td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
