@@ -237,7 +237,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Marlborough Anniversary
-        if (new Date(diff + incrementor).getDate() < 7) {
+        if (new Date(diff + incrementor).getDate() < 7 && week[day].innerText === "Monday") {
           td.innerHTML += `<ul><li>Marlborough Anniversary</li></ul>`;
         }
 
