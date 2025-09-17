@@ -252,7 +252,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Canterbury Anniversary
-        if () {
+        if (new Date(diff + incrementor).getDate() > 11) {
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
