@@ -259,7 +259,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Southland Anniversary
-        if (true) {
+        if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Tuesday").getMonth() {
           td.innerHTML += `<ul><li>Southland Anniversary</li></ul>`;
         }
 
