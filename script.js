@@ -257,7 +257,8 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Southland Anniversary
-        if () {
+        if (true) {
+          td.innerHTML += `<ul><li>Southland Anniversary</li></ul>`;
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
