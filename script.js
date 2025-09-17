@@ -243,6 +243,7 @@ const calendar = (rightNow, month, year) => {
 
         // Otago Anniversary
         if (new Date(diff + incrementor).getDate() > 21) {
+          td.innerHTML += `<ul><li>Otago Anniversary</li></ul>`;
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
