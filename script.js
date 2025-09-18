@@ -227,7 +227,8 @@ const calendar = (rightNow, month, year) => {
           new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2031, 7, 11")).setHours(1)).getTime() ||
           new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2032, 7, 2")).setHours(1)).getTime() ||
           new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2033, 6, 24")).setHours(1)).getTime() ||
-          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2034, 7, 7")).setHours(1)).getTime()
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2034, 7, 7")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2035, 6, 29")).setHours(1)).getTime()
         ) {
           td.innerHTML += `<ul><li>Matariki</li></ul>`;
         }
