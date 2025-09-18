@@ -14,7 +14,7 @@ const array = [
   ["April", []],
   ["May", []],
   ["June", []],
-  ["July", [], [], [], [], [], [], [], [], [], ["Matariki"]],
+  ["July", []],
   ["August", []],
   ["September", []],
   ["October", []],
@@ -211,6 +211,26 @@ const calendar = (rightNow, month, year) => {
         // Easter Monday
         if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Monday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Monday").getDate()) {
           td.innerHTML += `<ul><li>Easter Monday</li></ul>`;
+        }
+
+        // Matariki
+        if (
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2022, 6, 24")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2023, 7, 14")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2024, 6, 28")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2025, 6, 20")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2026, 7, 10")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2027, 6, 25")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2028, 7, 14")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2029, 7, 6")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2030, 6, 21")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2031, 7, 11")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2032, 7, 2")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2033, 6, 24")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2034, 7, 7")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2035, 6, 29")).setHours(1)).getTime()
+        ) {
+          td.innerHTML += `<ul><li>Matariki</li></ul>`;
         }
 
         // Auckland Anniversary

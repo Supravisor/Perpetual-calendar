@@ -7,10 +7,10 @@ Events populate the corresponding date, based on the position of the element in 
 
 New Year holidays, Easter, birthday of the reigning Sovereign, Labour Day, Anzac Day, Christmas and Boxing days, are automatically added by the script.
 
-Regional holidays are not fully listed in the app.
+Regional holidays are fully listed in the application.
 
 Matariki, the celebration of a star cluster rising, marks the beginning of the new year in the Māori lunar calendar.
-Matariki needs manual resetting each year.
+Matariki is set from the years 2022 to 2035.
 
 I was confronted with some known quirks with the Date API (Application Processing Interface).
 This was a great opportunity to debug and figure out a way to make the application work.
