@@ -274,7 +274,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Chatham Islands Anniversary (November)
-        if (new Date(diff + incrementor).getDate() > 26) {
+        if (new Date(diff + incrementor).getDate() > 26 && week[day].innerText === "Monday") {
           td.innerHTML += `<ul><li>Chatham Islands Anniversary</li></ul>`;
         }
 
