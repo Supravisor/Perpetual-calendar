@@ -214,7 +214,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Matariki
-        if () {
+        if (new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2022, 6, 24")).setHours(1)).getTime()) {
         }
 
         // Auckland Anniversary
