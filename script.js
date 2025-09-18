@@ -213,6 +213,10 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Easter Monday</li></ul>`;
         }
 
+        // Matariki
+        if () {
+        }
+
         // Auckland Anniversary
         if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "January") {
           td.innerHTML += `<ul><li>Auckland Anniversary</li></ul>`;
