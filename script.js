@@ -14,7 +14,7 @@ const array = [
   ["April", []],
   ["May", []],
   ["June", []],
-  ["July", [], [], [], [], [], [], [], [], [], ["Matariki"]],
+  ["July", []],
   ["August", []],
   ["September", []],
   ["October", []],
