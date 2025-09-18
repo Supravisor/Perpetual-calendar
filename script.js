@@ -273,6 +273,16 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
         }
 
+        // Chatham Islands Anniversary (November)
+        if (new Date(diff + incrementor).getDate() > 26 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
+          td.innerHTML += `<ul><li>Chatham Islands Anniversary</li></ul>`;
+        }
+
+        // Chatham Islands Anniversary (December)
+        if (new Date(diff + incrementor).getDate() < 4 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
+          td.innerHTML += `<ul><li>Chatham Islands Anniversary</li></ul>`;
+        }
+
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
           td.innerHTML = "";
           td.style.border = "none";
