@@ -28,6 +28,28 @@ td {
 }
 
 ul {
-  margin-left: -2.5em;
   list-style: none;
+}
+
+@media (min-width: 0px) {
+
+  body {
+    font-size: 0.5rem;
+  }
+
+  header {
+    height: 12em;
+  }
+
+  button {
+    display: block;
+    margin: auto;
+    width: 120px;
+    font-size: 1.5em;
+  }
+
+  ul {
+    margin-left: -5em;
+  }
+
 }
