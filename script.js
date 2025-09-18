@@ -278,6 +278,10 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Chatham Islands Anniversary</li></ul>`;
         }
 
+        // Chatham Islands Anniversary (December)
+        if () {
+        }
+
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
           td.innerHTML = "";
           td.style.border = "none";
