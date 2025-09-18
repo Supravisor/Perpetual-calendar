@@ -5,19 +5,8 @@ body {
   font-family: Arial;
 }
 
-header {
-  display: flex;
-  justify-content: space-around;
-}
-
 h1 {
   text-align: center;
-}
-
-button {
-  width: 160px;
-  font-size: 1.5em;
-  align-self: center;
 }
 
 td {
@@ -28,6 +17,88 @@ td {
 }
 
 ul {
-  margin-left: -2.5em;
   list-style: none;
+}
+
+@media (min-width: 0px) {
+
+  body {
+    font-size: 0.5rem;
+  }
+
+  header {
+    height: 12em;
+  }
+
+  button {
+    display: block;
+    margin: auto;
+    width: 120px;
+    font-size: 1.5em;
+  }
+
+  ul {
+    margin-left: -5em;
+  }
+
+}
+
+@media (min-width: 400px) {
+
+  body {
+    transform: rotate(0deg);
+    font-size: 0.7rem;
+  }
+
+  ul {
+    margin-left: -3.75em;
+  }
+
+}
+
+@media (min-width: 600px) {
+
+  body {
+    font-size: 0.7rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-around;
+    height: 5em;
+  }
+
+  ul {
+    margin-left: -3.5em;
+  }
+
+}
+
+@media (min-width: 800px) {
+
+  body {
+    font-size: 1rem;
+color: green;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-around;
+    height: 7em;
+  }
+
+  h1 {
+    padding-top: 0.5em;
+  }
+
+  button {
+    width: 160px;
+    align-self: center;
+    margin: 0;
+  }
+
+  ul {
+    margin-left: -2em;
+  }
+
 }
