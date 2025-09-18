@@ -104,7 +104,8 @@ const calendar = (rightNow, month, year) => {
 
     if (counter < 2) {
       previousButton.style.backgroundColor = "transparent";
-      previousButton.style.border = "none";
+      previousButton.style.borderColor = "transparent";
+      previousButton.innerHTML = `&nbsp;`
       previousButton.onclick = "";
     } else {
         previousButton.innerText = "<< Previous";
