@@ -42,3 +42,16 @@ ul {
   }
 
 }
+
+@media (min-width: 400px) {
+
+  body {
+    transform: rotate(0deg);
+    font-size: 0.7rem;
+  }
+
+  ul {
+    margin-left: -3.75em;
+  }
+
+}
