@@ -279,7 +279,7 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Chatham Islands Anniversary (December)
-        if () {
+        if (new Date(diff + incrementor).getDate() < 4) {
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
