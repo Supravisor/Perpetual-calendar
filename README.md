@@ -7,7 +7,7 @@ Events populate the corresponding date, based on the position of the element in 
 
 New Year holidays, Easter, birthday of the reigning Sovereign, Labour Day, Anzac Day, Christmas and Boxing days, are automatically added by the script.
 
-Regional holidays are fully listed in the application.
+Regional New Zealand holidays are fully listed in the application.
 
 Matariki, the celebration of a star cluster rising, marks the beginning of the new year in the Māori lunar calendar.
 Matariki is set from the years 2022 to 2035.
