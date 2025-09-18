@@ -12,5 +12,7 @@ Regional New Zealand holidays are fully listed in the application.
 Matariki, the celebration of a star cluster rising, marks the beginning of the new year in the Māori lunar calendar.
 Matariki is set from the years 2022 to 2035.
 
+Daylight saving start and end dates are listed in the calendar.
+
 I was confronted with some known quirks with the Date API (Application Processing Interface).
 This was a great opportunity to debug and figure out a way to make the application work.
