@@ -214,7 +214,10 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Matariki
-        if (new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2022, 6, 24")).setHours(1)).getTime()) {
+        if (
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2022, 6, 24")).setHours(1)).getTime() ||
+          new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2023, 7, 14")).setHours(1)).getTime()
+        ) {
           td.innerHTML += `<ul><li>Matariki</li></ul>`;
         }
 
