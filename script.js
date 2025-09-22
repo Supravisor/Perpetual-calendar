@@ -305,12 +305,12 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Daylight saving begins
-        if (new Date(diff + incrementor).getDate() > 22 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "September") {
+        if (new Date(diff + incrementor).getDate() > 22 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "September") {
           td.innerHTML += `<ul><li><i>Daylight saving begins<br /><br />2am becomes 3am</i></li></ul>`;
         }
 
         // Daylight saving ends
-        if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+        if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
           td.innerHTML += `<ul><li><i>Daylight saving ends<br /><br />3am becomes 2am</i></li></ul>`;
         }
 
