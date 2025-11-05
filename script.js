@@ -257,6 +257,7 @@ const calendar = (rightNow, month, year) => {
         // Wellington Anniversary
         if (new Date(diff + incrementor).getDate() > 14 && new Date(diff + incrementor).getDate() < 22 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "January") {
           td.innerHTML += `<ul><li>Wellington Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Wellington Anniversary</li></ol>`;
         }
 
         // Nelson Anniversary
