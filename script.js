@@ -87,7 +87,9 @@ function next() {
 const calendar = (rightNow, month, year) => {
   const body = document.querySelector("body");
     body.innerHTML = "";
-  
+
+  let smallViewportList = document.createElement("div");
+
   const monthName = document.getElementById("monthName");
   const calendarBody = document.getElementById("calendar-body");
   const days = document.getElementById("days");
