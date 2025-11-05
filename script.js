@@ -87,7 +87,9 @@ function next() {
 const calendar = (rightNow, month, year) => {
   const body = document.querySelector("body");
     body.innerHTML = "";
-  
+
+  let smallViewportList = document.createElement("div");
+
   const monthName = document.getElementById("monthName");
   const calendarBody = document.getElementById("calendar-body");
   const days = document.getElementById("days");
@@ -237,21 +239,25 @@ const calendar = (rightNow, month, year) => {
         // Auckland Anniversary
         if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "January") {
           td.innerHTML += `<ul><li>Auckland Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Auckland Anniversary</li></ol>`;
         }
 
         // Taranaki Anniversary
         if (new Date(diff + incrementor).getDate() > 6 && new Date(diff + incrementor).getDate() < 15 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "March") {
           td.innerHTML += `<ul><li>Taranaki Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Taranaki Anniversary</li></ol>`;
         }
 
         // Hawke's Bay Anniversary
         if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Friday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "October") {
           td.innerHTML += `<ul><li>Hawke's Bay Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Hawke's Bay Anniversary</li></ol>`;
         }
 
         // Wellington Anniversary
         if (new Date(diff + incrementor).getDate() > 14 && new Date(diff + incrementor).getDate() < 22 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "January") {
           td.innerHTML += `<ul><li>Wellington Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Wellington Anniversary</li></ol>`;
         }
 
         // Nelson Anniversary
