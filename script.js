@@ -269,6 +269,7 @@ const calendar = (rightNow, month, year) => {
         // Marlborough Anniversary
         if (new Date(diff + incrementor).getDate() < 7 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
           td.innerHTML += `<ul><li>Marlborough Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Marlborough Anniversary</li></ol>`;
         }
 
         // Otago Anniversary
