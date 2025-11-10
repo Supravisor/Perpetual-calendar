@@ -287,6 +287,7 @@ const calendar = (rightNow, month, year) => {
         // Canterbury Anniversary
         if (new Date(diff + incrementor).getDate() > 11 && new Date(diff + incrementor).getDate() < 18 && week[day].innerText === "Friday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
           td.innerHTML += `<ul><li>Canterbury Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Canterbury Anniversary</li></ol>`;
         }
 
         // Southland Anniversary
