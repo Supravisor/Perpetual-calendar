@@ -287,21 +287,25 @@ const calendar = (rightNow, month, year) => {
         // Canterbury Anniversary
         if (new Date(diff + incrementor).getDate() > 11 && new Date(diff + incrementor).getDate() < 18 && week[day].innerText === "Friday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
           td.innerHTML += `<ul><li>Canterbury Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Canterbury Anniversary</li></ol>`;
         }
 
         // Southland Anniversary
         if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Tuesday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Tuesday").getDate()) {
           td.innerHTML += `<ul><li>Southland Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Southland Anniversary</li></ol>`;
         }
 
         // Westland Anniversary (November)
         if (new Date(diff + incrementor).getDate() > 27 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
           td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Westland Anniversary</li></ol>`;
         }
 
         // Westland Anniversary (December)
         if (new Date(diff + incrementor).getDate() < 5 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Westland Anniversary</li></ol>`;
         }
 
         // Chatham Islands Anniversary (November)
@@ -352,6 +356,9 @@ const calendar = (rightNow, month, year) => {
       table.append(weeklyRow);
 
     }
+
+  body.append(smallViewportList)
+
 }
 
 calendar(thisDay, thisMonth, thisYear);
