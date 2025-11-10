@@ -353,6 +353,9 @@ const calendar = (rightNow, month, year) => {
       table.append(weeklyRow);
 
     }
+
+  body.append(smallViewportList)
+
 }
 
 calendar(thisDay, thisMonth, thisYear);
