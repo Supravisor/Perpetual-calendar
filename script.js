@@ -299,11 +299,13 @@ const calendar = (rightNow, month, year) => {
         // Westland Anniversary (November)
         if (new Date(diff + incrementor).getDate() > 27 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
           td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Westland Anniversary</li></ol>`;
         }
 
         // Westland Anniversary (December)
         if (new Date(diff + incrementor).getDate() < 5 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           td.innerHTML += `<ul><li>Westland Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Westland Anniversary</li></ol>`;
         }
 
         // Chatham Islands Anniversary (November)
