@@ -311,21 +311,25 @@ const calendar = (rightNow, month, year) => {
         // Chatham Islands Anniversary (November)
         if (new Date(diff + incrementor).getDate() > 26 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
           td.innerHTML += `<ul><li>Chatham Islands Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Chatham Islands Anniversary</li></ol>`;
         }
 
         // Chatham Islands Anniversary (December)
         if (new Date(diff + incrementor).getDate() < 4 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           td.innerHTML += `<ul><li>Chatham Islands Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Chatham Islands Anniversary</li></ol>`;
         }
 
         // Daylight saving begins
         if (new Date(diff + incrementor).getDate() > 22 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "September") {
           td.innerHTML += `<ul><li><i>Daylight saving begins<br /><br />2am becomes 3am</i></li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li><i>Daylight saving begins - 2am becomes 3am</i></li></ol>`;
         }
 
         // Daylight saving ends
         if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
           td.innerHTML += `<ul><li><i>Daylight saving ends<br /><br />3am becomes 2am</i></li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li><i>Daylight saving ends - 3am becomes 2am</i></li></ol>`;
         }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
