@@ -311,11 +311,13 @@ const calendar = (rightNow, month, year) => {
         // Chatham Islands Anniversary (November)
         if (new Date(diff + incrementor).getDate() > 26 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "November") {
           td.innerHTML += `<ul><li>Chatham Islands Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Chatham Islands Anniversary</li></ol>`;
         }
 
         // Chatham Islands Anniversary (December)
         if (new Date(diff + incrementor).getDate() < 4 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           td.innerHTML += `<ul><li>Chatham Islands Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Chatham Islands Anniversary</li></ol>`;
         }
 
         // Daylight saving begins
