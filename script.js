@@ -323,6 +323,7 @@ const calendar = (rightNow, month, year) => {
         // Daylight saving begins
         if (new Date(diff + incrementor).getDate() > 22 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "September") {
           td.innerHTML += `<ul><li><i>Daylight saving begins<br /><br />2am becomes 3am</i></li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li><i>Daylight saving begins - 2am becomes 3am</i></li></ol>`;
         }
 
         // Daylight saving ends
