@@ -110,7 +110,7 @@ const calendar = (rightNow, month, year) => {
       previousButton.innerHTML = `&nbsp;`
       previousButton.onclick = "";
     } else {
-        previousButton.innerText = "<< Previous";
+        previousButton.innerText = "Previous";
         previousButton.onclick = previous;
     }
 
@@ -128,7 +128,7 @@ const calendar = (rightNow, month, year) => {
       nextButton.style.backgroundColor = "transparent";
       nextButton.style.border = "none";
     } else {
-        nextButton.innerText = "Next >>";
+        nextButton.innerText = "Next";
         nextButton.onclick = next;
     }
 
