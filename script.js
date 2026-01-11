@@ -237,6 +237,7 @@ const calendar = (rightNow, month, year) => {
           new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2035, 6, 29")).setHours(1)).getTime()
         ) {
           td.innerHTML += `<ul><li>Matariki</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Matariki</li></ol>`;
         }
 
         // Auckland Anniversary
