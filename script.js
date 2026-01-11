@@ -187,9 +187,10 @@ const calendar = (rightNow, month, year) => {
           smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>King's Birthday Anniversary</li></ol>`;
         }
 
-        // Labour day
+        // Labour Day
         if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "October") {
           td.innerHTML += `<ul><li>Labour Day</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Labour Day</li></ol>`;
         }
 
         // Anzac Day (Mondayise)
