@@ -110,7 +110,7 @@ const calendar = (rightNow, month, year) => {
       previousButton.innerHTML = `&nbsp;`
       previousButton.onclick = "";
     } else {
-        previousButton.innerText = "<< Previous";
+        previousButton.innerText = "Previous";
         previousButton.onclick = previous;
     }
 
@@ -128,7 +128,7 @@ const calendar = (rightNow, month, year) => {
       nextButton.style.backgroundColor = "transparent";
       nextButton.style.border = "none";
     } else {
-        nextButton.innerText = "Next >>";
+        nextButton.innerText = "Next";
         nextButton.onclick = next;
     }
 
@@ -184,16 +184,19 @@ const calendar = (rightNow, month, year) => {
         // King's birthday anniversary
         if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
           td.innerHTML += `<ul><li>King's Birthday Anniversary</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>King's Birthday Anniversary</li></ol>`;
         }
 
-        // Labour day
+        // Labour Day
         if (new Date(diff + incrementor).getDate() > 21 && new Date(diff + incrementor).getDate() < 29 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "October") {
           td.innerHTML += `<ul><li>Labour Day</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Labour Day</li></ol>`;
         }
 
         // Anzac Day (Mondayise)
         if ((new Date(diff + incrementor).getDate() === 26 || new Date(diff + incrementor).getDate() === 27) && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
           td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Anzac Day</li></ol>`;
         }
 
         // Anzac Day (Actual)
@@ -234,6 +237,7 @@ const calendar = (rightNow, month, year) => {
           new Date(new Date(new Date(diff + incrementor)).setHours(1)).getTime() === new Date(new Date(new Date("2035, 6, 29")).setHours(1)).getTime()
         ) {
           td.innerHTML += `<ul><li>Matariki</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Matariki</li></ol>`;
         }
 
         // Auckland Anniversary
