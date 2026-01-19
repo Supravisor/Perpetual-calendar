@@ -181,6 +181,11 @@ const calendar = (rightNow, month, year) => {
             td.innerHTML += `<ul>${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
           }
 
+        // Public holidays
+        if (new Date(diff + incrementor).getDate() === 1 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "January") {
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
+        }
+
         // King's birthday anniversary
         if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
           td.innerHTML += `<ul><li>King's Birthday Anniversary</li></ul>`;
