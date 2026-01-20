@@ -153,7 +153,8 @@ const calendar = (rightNow, month, year) => {
     }
 
   // days of the week for table
-    table.appendChild(daysOfTheWeek);
+    table.appendChild(daysOfTheWeekLong);
+    table.appendChild(daysOfTheWeekShort);
     body.appendChild(table)
 
   // calendar dates
