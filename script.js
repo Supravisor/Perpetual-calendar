@@ -137,7 +137,9 @@ const calendar = (rightNow, month, year) => {
   let table = document.createElement("table");
 
   // days of the week
-  let daysOfTheWeek = document.createElement("tr");
+  let daysOfTheWeekLong = document.createElement("tr");
+  let daysOfTheWeekShort = document.createElement("tr");
+
     for (let day = 0; day < 7; day++) {
       let td = document.createElement("td");
         td.style.borderRadius = "10px";
