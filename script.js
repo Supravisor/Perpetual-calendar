@@ -144,7 +144,12 @@ const calendar = (rightNow, month, year) => {
       let td = document.createElement("td");
         td.style.borderRadius = "10px";
         td.innerText = new Date(2000,1,day).toLocaleString("default", { weekday: "long" });
-        daysOfTheWeek.appendChild(td);
+        daysOfTheWeekLong.appendChild(td);
+
+      let tdShort = document.createElement("td");
+        tdShort.style.borderRadius = "6px";
+        tdShort.innerText = new Date(2000,1,day).toLocaleString("default", { weekday: "short" });
+        daysOfTheWeekShort.appendChild(tdShort);
     }
 
   // days of the week for table
