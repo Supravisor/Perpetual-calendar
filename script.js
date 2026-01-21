@@ -228,11 +228,6 @@ const calendar = (rightNow, month, year) => {
           td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
         }
 
-        // Good Friday
-        if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getDate()) {
-          td.innerHTML += `<ul><li>Good Friday</li></ul>`;
-        }
-
         // Easter Sunday
         if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Sunday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Sunday").getDate()) {
           td.innerHTML += `<ul><li>Easter Sunday</li></ul>`;
@@ -364,9 +359,11 @@ const calendar = (rightNow, month, year) => {
               smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li><i>Daylight saving ends - 3am becomes 2am</i></li></ol>`;
             }
 
-        if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
-          td.innerHTML = "";
-          td.style.border = "none";
+            // Good Friday
+            if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getDate()) {
+              td.innerHTML += `<ul><li>Good Friday</li></ul>`;
+              smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Good Friday</li></ol>`;
+            }
         }
 
           incrementor += 1000*24*60*60;
