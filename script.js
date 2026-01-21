@@ -355,10 +355,14 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Daylight saving ends
-        if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
-          td.innerHTML += `<ul><li><i>Daylight saving ends<br /><br />3am becomes 2am</i></li></ul>`;
-          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li><i>Daylight saving ends - 3am becomes 2am</i></li></ol>`;
-        }
+        if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
+          td.innerHTML = "";
+          td.style.border = "none";
+        } else {
+            if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+              td.innerHTML += `<ul><li><i>Daylight saving ends<br /><br />3am becomes 2am</i></li></ul>`;
+              smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li><i>Daylight saving ends - 3am becomes 2am</i></li></ol>`;
+            }
 
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
           td.innerHTML = "";
