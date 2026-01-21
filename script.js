@@ -201,10 +201,6 @@ const calendar = (rightNow, month, year) => {
           smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
-        if (new Date(diff + incrementor).getDate() === 25 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
-          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
-        }
-
         if (new Date(diff + incrementor).getDate() === 26 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
