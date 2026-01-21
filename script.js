@@ -175,7 +175,6 @@ const calendar = (rightNow, month, year) => {
             td.style.padding = "0.5em 0.5em 0";
             td.style.textAlign = "unset";
             td.style.verticalAlign = "top";
-            td.style.height = "8em";
 
         if (new Date(diff + incrementor).getDate() === thisDay && new Date(diff + incrementor).getMonth() === thisMonth && new Date().getMonth() === thisMonth) {
           td.style.color = "black";
