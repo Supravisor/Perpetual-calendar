@@ -142,7 +142,7 @@ const calendar = (rightNow, month, year) => {
 
     for (let day = 0; day < 7; day++) {
       let td = document.createElement("td");
-        td.style.borderRadius = "10px";
+        td.style.borderRadius = "6px";
         td.innerText = new Date(2000,1,day).toLocaleString("default", { weekday: "long" });
         daysOfTheWeekLong.appendChild(td);
 
