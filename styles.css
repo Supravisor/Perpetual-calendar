@@ -22,10 +22,6 @@ ul {
 
 @media (min-width: 0px) {
 
-  body {
-    font-size: 0.5rem;
-  }
-
   header {
     height: 12em;
   }
@@ -37,8 +33,16 @@ ul {
     font-size: 1.5em;
   }
 
+  tr:nth-of-type(1) {
+    display: none;
+  }
+
+  tr:nth-of-type(3) > td, tr:nth-of-type(4) > td, tr:nth-of-type(5) > td, tr:nth-of-type(6) > td, tr:nth-of-type(7) > td, tr:nth-of-type(8) > td {
+    height: calc(100vw / 7);
+  }
+
   ul {
-    margin-left: -5em;
+    display: none;
   }
 
 }
@@ -47,29 +51,16 @@ ul {
 
   body {
     transform: rotate(0deg);
-    font-size: 0.7rem;
-  }
-
-  ul {
-    margin-left: -3.75em;
   }
 
 }
 
 @media (min-width: 600px) {
 
-  body {
-    font-size: 0.7rem;
-  }
-
   header {
     display: flex;
     justify-content: space-around;
     height: 5em;
-  }
-
-  ul {
-    margin-left: -3.5em;
   }
 
 }

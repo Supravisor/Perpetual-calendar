@@ -137,16 +137,24 @@ const calendar = (rightNow, month, year) => {
   let table = document.createElement("table");
 
   // days of the week
-  let daysOfTheWeek = document.createElement("tr");
+  let daysOfTheWeekLong = document.createElement("tr");
+  let daysOfTheWeekShort = document.createElement("tr");
+
     for (let day = 0; day < 7; day++) {
       let td = document.createElement("td");
-        td.style.borderRadius = "10px";
+        td.style.borderRadius = "6px";
         td.innerText = new Date(2000,1,day).toLocaleString("default", { weekday: "long" });
-        daysOfTheWeek.appendChild(td);
+        daysOfTheWeekLong.appendChild(td);
+
+      let tdShort = document.createElement("td");
+        tdShort.style.borderRadius = "6px";
+        tdShort.innerText = new Date(2000,1,day).toLocaleString("default", { weekday: "short" });
+        daysOfTheWeekShort.appendChild(tdShort);
     }
 
   // days of the week for table
-    table.appendChild(daysOfTheWeek);
+    table.appendChild(daysOfTheWeekLong);
+    table.appendChild(daysOfTheWeekShort);
     body.appendChild(table)
 
   // calendar dates
@@ -167,7 +175,6 @@ const calendar = (rightNow, month, year) => {
             td.style.padding = "0.5em 0.5em 0";
             td.style.textAlign = "unset";
             td.style.verticalAlign = "top";
-            td.style.height = "8em";
 
         if (new Date(diff + incrementor).getDate() === thisDay && new Date(diff + incrementor).getMonth() === thisMonth && new Date().getMonth() === thisMonth) {
           td.style.color = "black";
@@ -180,6 +187,35 @@ const calendar = (rightNow, month, year) => {
           if (array[thisMonth][new Date(diff + incrementor).getDate()]) {
             td.innerHTML += `<ul>${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
           }
+
+        // Public holidays
+        if (new Date(diff + incrementor).getDate() === 1 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "January") {
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
+        }
+
+        if (new Date(diff + incrementor).getDate() === 2 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "January") {
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
+        }
+
+        // Waitangi Day
+        if (new Date(diff + incrementor).getDate() === 6  && week[day].innerText !== "Saturday" && week[day].innerText !== "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "February") {
+          td.innerHTML += `<ul><li>Waitangi Day</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Waitangi Day</li></ol>`;
+        }
+
+        // Waitangi Day (Mondayise)
+        if ((new Date(diff + incrementor).getDate() === 7 || new Date(diff + incrementor).getDate() === 8) && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "February") {
+          td.innerHTML += `<ul><li>Waitangi Day</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Waitangi Day</li></ol>`;
+        }
+
+        if (new Date(diff + incrementor).getDate() === 25 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
+        }
+
+        if (new Date(diff + incrementor).getDate() === 26 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
+        }
 
         // King's birthday anniversary
         if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Monday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "June") {
@@ -202,11 +238,6 @@ const calendar = (rightNow, month, year) => {
         // Anzac Day (Actual)
         if (new Date(diff + incrementor).getDate() === 25 && week[day].innerText !== "Saturday" && week[day].innerText !== "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
           td.innerHTML += `<ul><li>Anzac Day</li></ul>`;
-        }
-
-        // Good Friday
-        if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getDate()) {
-          td.innerHTML += `<ul><li>Good Friday</li></ul>`;
         }
 
         // Easter Sunday
@@ -331,14 +362,20 @@ const calendar = (rightNow, month, year) => {
         }
 
         // Daylight saving ends
-        if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
-          td.innerHTML += `<ul><li><i>Daylight saving ends<br /><br />3am becomes 2am</i></li></ul>`;
-          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li><i>Daylight saving ends - 3am becomes 2am</i></li></ol>`;
-        }
-
         if ((month > 3 && new Date(diff + incrementor).getDate() < 7)) {
           td.innerHTML = "";
           td.style.border = "none";
+        } else {
+            if (new Date(diff + incrementor).getDate() < 8 && week[day].innerText === "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "April") {
+              td.innerHTML += `<ul><li><i>Daylight saving ends<br /><br />3am becomes 2am</i></li></ul>`;
+              smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li><i>Daylight saving ends - 3am becomes 2am</i></li></ol>`;
+            }
+
+            // Good Friday
+            if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Friday").getDate()) {
+              td.innerHTML += `<ul><li>Good Friday</li></ul>`;
+              smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Good Friday</li></ol>`;
+            }
         }
 
           incrementor += 1000*24*60*60;
@@ -348,7 +385,6 @@ const calendar = (rightNow, month, year) => {
                 td.style.padding = "0.5em 0.5em 0";
                 td.style.textAlign = "unset";
                 td.style.verticalAlign = "top";
-                td.style.height = "6em";
     
               if (month === 0 || new Date(diff + incrementor).getDate() < 7) {
                 td.innerText = "";
