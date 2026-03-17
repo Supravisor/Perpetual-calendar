@@ -53,10 +53,6 @@ ul {
     transform: rotate(0deg);
   }
 
-  ul {
-    margin-left: -3.75em;
-  }
-
 }
 
 @media (min-width: 600px) {
