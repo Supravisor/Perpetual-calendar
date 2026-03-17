@@ -22,10 +22,6 @@ ul {
 
 @media (min-width: 0px) {
 
-  body {
-    font-size: 0.5rem;
-  }
-
   header {
     height: 12em;
   }
