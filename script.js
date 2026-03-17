@@ -197,6 +197,12 @@ const calendar = (rightNow, month, year) => {
           smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
+        // Waitangi Day
+        if (new Date(diff + incrementor).getDate() === 6  && week[day].innerText !== "Saturday" && week[day].innerText !== "Sunday" && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "February") {
+          td.innerHTML += `<ul><li>Waitangi Day</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Waitangi Day</li></ol>`;
+        }
+
         if (new Date(diff + incrementor).getDate() === 25 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
