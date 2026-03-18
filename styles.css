@@ -96,6 +96,7 @@ ul {
   }
 
   ul {
+    display: unset;
     margin-left: -2em;
   }
 
