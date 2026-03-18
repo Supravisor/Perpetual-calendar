@@ -100,4 +100,9 @@ ul {
     margin-left: -2em;
   }
 
+  ol {
+    display: none;
+  }
+
 }
+
