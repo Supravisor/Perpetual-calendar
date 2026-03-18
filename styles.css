@@ -67,10 +67,6 @@ ul {
 
 @media (min-width: 800px) {
 
-  body {
-    font-size: 1rem;
-  }
-
   header {
     display: flex;
     justify-content: space-around;
@@ -81,6 +77,18 @@ ul {
     padding-top: 0.5em;
   }
 
+  tr:nth-of-type(1) {
+    display: table-row;
+  }
+
+  tr:nth-of-type(2) {
+    display: none;
+  }
+
+  tr:nth-of-type(3) > td, tr:nth-of-type(4) > td, tr:nth-of-type(5) > td, tr:nth-of-type(6) > td, tr:nth-of-type(7) > td, tr:nth-of-type(8) > td {
+    height: 8em;
+  }
+
   button {
     width: 160px;
     align-self: center;
@@ -88,7 +96,13 @@ ul {
   }
 
   ul {
+    display: unset;
     margin-left: -2em;
   }
 
+  ol {
+    display: none;
+  }
+
 }
+
