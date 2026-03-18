@@ -243,6 +243,7 @@ const calendar = (rightNow, month, year) => {
         // Easter Sunday
         if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Sunday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Sunday").getDate()) {
           td.innerHTML += `<ul><li>Easter Sunday</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Easter Sunday</li></ol>`;
         }
 
         // Easter Monday
