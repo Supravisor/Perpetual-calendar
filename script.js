@@ -209,10 +209,12 @@ const calendar = (rightNow, month, year) => {
           smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Waitangi Day</li></ol>`;
         }
 
+        // Christmas Day
         if (new Date(diff + incrementor).getDate() === 25 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
 
+        // Boxing Day
         if (new Date(diff + incrementor).getDate() === 26 && new Date (diff + incrementor).toLocaleString("default", { month: "long" }) === "December") {
           smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}">${array[thisMonth][new Date(diff + incrementor).getDate()].map(el => `<li>${el}</li>`).join("")}</ul>`;
         }
@@ -249,6 +251,7 @@ const calendar = (rightNow, month, year) => {
         // Easter Monday
         if (new Date(new Date(diff + incrementor).setHours(1)).getMonth() === getEaster(new Date(diff + incrementor).getFullYear(), "Monday").getMonth() && new Date(new Date(diff + incrementor).setHours(1)).getDate() === getEaster(new Date(diff + incrementor).getFullYear(), "Monday").getDate()) {
           td.innerHTML += `<ul><li>Easter Monday</li></ul>`;
+          smallViewportList.innerHTML += `<ol start="${new Date(diff + incrementor).getDate()}"><li>Easter Monday</li></ol>`;
         }
 
         // Matariki
