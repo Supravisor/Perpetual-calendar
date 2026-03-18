@@ -67,10 +67,6 @@ ul {
 
 @media (min-width: 800px) {
 
-  body {
-    font-size: 1rem;
-  }
-
   header {
     display: flex;
     justify-content: space-around;
