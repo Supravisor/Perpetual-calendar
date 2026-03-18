@@ -81,6 +81,10 @@ ul {
     display: table-row;
   }
 
+  tr:nth-of-type(2) {
+    display: none;
+  }
+
   button {
     width: 160px;
     align-self: center;
