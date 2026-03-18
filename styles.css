@@ -85,6 +85,10 @@ ul {
     display: none;
   }
 
+  tr:nth-of-type(3) > td, tr:nth-of-type(4) > td, tr:nth-of-type(5) > td, tr:nth-of-type(6) > td, tr:nth-of-type(7) > td, tr:nth-of-type(8) > td {
+    height: 8em;
+  }
+
   button {
     width: 160px;
     align-self: center;
