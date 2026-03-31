@@ -83,10 +83,18 @@ function next() {
   if (counter < 12) {
     counter++;
 
-    if (thisMonth === 11) {
-      thisMonth -= 12
-      thisYear++
-    }
+  if (thisMonth === 11) {
+    thisMonth -= 12;
+    thisYear++;
+  }
+
+  if (thisMonth === 0 && thisDay > 28) {
+    thisDay = 1;
+  }
+
+  if (thisMonth === 3 && thisDay > 30) {
+    thisDay = 1;
+  }
 
     calendar(thisDay, (++thisMonth), thisYear);
     const callMonth = document.querySelectorAll("h1");
