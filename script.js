@@ -62,6 +62,18 @@ function previous() {
     --counter;
   }
 
+  if (thisMonth === 0 && thisDay > 28) {
+    thisDay = 1;
+  }
+
+  if (thisMonth === 3 && thisDay > 30) {
+    thisDay = 1;
+  }
+
+  if (thisMonth === 1) {
+    thisDay = thisDate.getDate();
+  }
+
   calendar(thisDay, --thisMonth, thisYear);
 
 }
