@@ -63,14 +63,18 @@ function previous() {
   }
 
   if (thisMonth === 0 && thisDay > 28) {
-    thisDay = 1;
+//    thisDay = 1;
   }
 
   if (thisMonth === 3 && thisDay > 30) {
-    thisDay = 1;
+//    thisDay = 1;
   }
 
   if (thisMonth === 1) {
+//    thisDay = thisDate.getDate();
+  }
+
+  if (thisMonth === 8) {
     thisDay = thisDate.getDate();
   }
 
@@ -96,12 +100,15 @@ function next() {
     thisDay = 1;
   }
 
-    calendar(thisDay, (++thisMonth), thisYear);
-    const callMonth = document.querySelectorAll("h1");
-    callMonth[0].innerText = new Date(thisYear, thisMonth, thisDay).toLocaleString("default", { month: "long" }) + " " + new Date(thisYear, thisMonth, thisDay).getFullYear();
-
+  if (thisMonth === 7 && thisDay > 30) {
+    thisDay = 1;
   }
 
+  calendar(thisDay, (++thisMonth), thisYear);
+  const callMonth = document.querySelectorAll("h1");
+  callMonth[0].innerText = new Date(thisYear, thisMonth, thisDay).toLocaleString("default", { month: "long" }) + " " + new Date(thisYear, thisMonth, thisDay).getFullYear();
+
+  }
 }
 
 const calendar = (rightNow, month, year) => {
