@@ -63,15 +63,15 @@ function previous() {
   }
 
   if (thisMonth === 0 && thisDay > 28) {
-    thisDay = 1;
+//    thisDay = 1;
   }
 
   if (thisMonth === 3 && thisDay > 30) {
-    thisDay = 1;
+//    thisDay = 1;
   }
 
   if (thisMonth === 1) {
-    thisDay = thisDate.getDate();
+//    thisDay = thisDate.getDate();
   }
 
   if (thisMonth === 8) {
