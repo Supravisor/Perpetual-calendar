@@ -74,6 +74,10 @@ function previous() {
     thisDay = thisDate.getDate();
   }
 
+  if (thisMonth === 8) {
+    thisDay = thisDate.getDate();
+  }
+
   calendar(thisDay, --thisMonth, thisYear);
 
 }
